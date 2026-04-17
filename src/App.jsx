@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./pages/dashboard.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import PredictOrders from "./pages/preditctorders.jsx";
 import PublicPageLayout from "./components/publicPageLayout.jsx";
-import Login from "./pages/login.jsx";
+import Login from "./pages/Login.jsx";
 import Register from "./pages/register.jsx";
-import ProtectedRoute from "./components/protectedroutee.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import History from "./pages/history.jsx";
 import ApiKeyPage from "./pages/apikey.jsx";
 import UsagePage from "./pages/usage.jsx";
