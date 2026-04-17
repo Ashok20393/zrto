@@ -1,0 +1,39 @@
+import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
+
+export default function ProtectedRoute({ children }) {
+  const [isAuth, setIsAuth] = useState(null);
+
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const res = await fetch("http://localhost:8000/protected", {
+          credentials: "include", // 🔥 must
+        });
+
+        if (res.status === 200) {
+          setIsAuth(true);
+        } else {
+          setIsAuth(false);
+        }
+      } catch (err) {
+        setIsAuth(false);
+      }
+    };
+
+    checkAuth();
+  }, []);
+
+  // ⏳ while checking
+  if (isAuth === null) {
+    return <div>Loading...</div>;
+  }
+
+  // ❌ not authenticated
+  if (!isAuth) {
+    return <Navigate to="/login" />;
+  }
+
+  // ✅ authenticated
+  return children;
+}
