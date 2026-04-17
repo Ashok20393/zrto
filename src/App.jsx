@@ -22,7 +22,7 @@ import ForgotPassword from "./pages/forgotpassword.jsx"
 import Account from "./pages/account.jsx";
 import ApiIntegration from "./pages/apiintegration.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
-import AdminRoute from "./pages/AdminRoute.jsx";
+import AdminRoute from "./pages/Adminroute.jsx";
 
 
 function App() {
