@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Dashboard from "./pages/temp.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
 import PredictOrders from "./pages/preditctorders.jsx";
 import PublicPageLayout from "./components/publicPageLayout.jsx";
 import Login from "./pages/Login.jsx";
